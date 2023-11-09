@@ -1,20 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import 'react-native-gesture-handler';
+
+import { createDrawerNavigator } from '@react-navigation/drawer'
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import Lista_Tarefas from '../screens/ToDo/ToDo';
+import StackAlunos from '../screens/Alunos/StackAlunos'
 
 const Drawer = createDrawerNavigator()
 
-export default function DrawerRouter() {
-  return (
-    <NavigationContainer>
-        <Drawer.Navigator initialRouteName="ToDo">
-            <Drawer.Screen name='ToDo' component={Lista_Tarefas}/>
-        </Drawer.Navigator>
-    </NavigationContainer>
-  )
-}
+export default function DrawerRoutes() {
+    return (
+        <Drawer.Navigator initialRouteName='Alunos'>
+            <Drawer.Screen name="Alunos" component={StackAlunos} />
 
-const styles = StyleSheet.create({})
+        </Drawer.Navigator>
+
+    )
+}
